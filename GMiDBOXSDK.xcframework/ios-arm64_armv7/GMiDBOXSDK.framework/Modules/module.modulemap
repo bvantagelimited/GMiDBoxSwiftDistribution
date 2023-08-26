@@ -1,0 +1,10 @@
+framework module GMiDBOXSDK {
+    umbrella header "GMiDBOXSDK.h"
+    export *
+    module * { export * }
+}
+
+module GMiDBOXSDK.Swift {
+    header "GMiDBOXSDK-Swift.h"
+    requires objc
+}
