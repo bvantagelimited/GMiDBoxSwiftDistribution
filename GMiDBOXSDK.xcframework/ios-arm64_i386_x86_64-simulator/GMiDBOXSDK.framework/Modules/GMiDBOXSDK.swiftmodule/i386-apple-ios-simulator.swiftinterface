@@ -33,6 +33,13 @@ public protocol CellularCallback {
   func continueRequest(_ url: Swift.String)
   func onLogs(_ log: Swift.String)
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CellularConfiguration : ObjectiveC.NSObject {
+  final public let SDK_VERSION: Swift.String
+  public var CELLULAR_READ_TIMEOUT: Swift.Double
+  public var CELLULAR_CONNECT_TIMEOUT: Swift.Double
+  public static let sharedInstance: GMiDBOXSDK.CellularConfiguration
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class CellularResponse {
   public var statusCode: Swift.Int
   public func getResponseData() -> Any
